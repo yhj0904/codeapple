@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/main.css" rel="stylesheet" />
+  </head>
+  <body class="grey-bg">
+    <%- include('nav.ejs') %>
+
+    <input class="search">
+    <Button class="search-send">검색</Button>
+    <script>
+
+      document.querySelector('.search-send').addEventListener('click',function(){
+        //새로고침 하기전 fetch를 쓸수 있지만 새로고침해도 노상관?
+       let searchResult= document.querySelector('.search').value
+        location.href='/search?val=' + searchResult //get요청가능
+        
+
+      })
+
+    </script>
+
+    <h4>검색결과인데~~~</h4>
+    <div class="white-bg">
+      <% for(let i = 0; i < posts.length; i++){ %>
+      <div class="list-box">
+        <h4>
+          <a href="/detail/<%=posts[i]._id%>"><%= posts[i].title %></a
+          ><a href="/edit/<%=posts[i]._id%>"> 수정 </a>
+          <span class="delete" data-id="<%=posts[i]._id%>"> 삭제 </span>
+        </h4>
+        <p><%= posts[i].content %></p>
+      </div>
+      <% } %>
+    </div>
+
+   
+  </body>
+</html>
