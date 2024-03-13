@@ -432,4 +432,4 @@ app.get('/stream/list',(req,res)=>{
 // swagger 같은 내가만든 API 요약본 정리.  DB의 컬렉션과 document 구조를 ERD처럼 그려놔도 좋음.
 //API가 많아지면 routes 파일 만들어서 비슷한 API끼리 파일에 모아놓거나 API안에 있는 코드가 너무 길면 함수로 빼고 비슷한 기능을 하는 함수정의들을 한파일에 모아놓기.
 // db에 document 데이터가 많아져도 CRUD가 편리할지. 에러나 예외사항이 발생해도 대처 가능한지. 코드가 길어져도 찾아서 수정이 편리할지 생각해서 짜기.
-// 결제기능은 포트원이라는 서비스쓰기. 에디터?유저가 작성한글을 HTML이나 JSON으로 변화해서 DB에 저장할수 있게 해줌 quill.js ToastUI
+// 결제기능은 포트원이라는 서비스쓰기. 에디터?유저가 작성한글을 HTML이나 JSON으로 변화해서 DB에 저장할수 있게 해줌 quill.js ToastUI e
